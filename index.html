@@ -300,7 +300,7 @@ p .md-image:only-child { width: auto; text-align: left; }
     }
 }
 
-</pre><p><img src='/images/1597822031608.png' alt='1597822031608' referrerPolicy='no-referrer' /></p><h4><a name='header-n266' class='md-header-anchor '></a>5. 类加载器分类</h4><ul><li>JVM支持两种类型的类加载器，分别是<strong>引导类加载器（Bootstrap ClassLoader）</strong>和 <strong>自定义加载器（User-Defined ClassLoader）</strong></li><li>从概念上讲，自定义类加载器一般指的是程序中由开发人员自定义的一类类加载器，但是Java虚拟机规范没有这样定义，而是<strong>将所有的派生于抽象类ClassLoader的类加载器都划分为自定义类加载器</strong></li><li>无论加载器的类型如何划分，在程序中我们最常见的类加载器只有3个，如下</li></ul><p><img src='/images/1597822535038.png' alt='1597822535038' referrerPolicy='no-referrer' /></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="java" contenteditable="false" cid="n275" mdtype="fences" style="break-inside: unset;">public class ClassLoaderTest {
+</pre><p><img src='images/1597822031608.png' alt='1597822031608' referrerPolicy='no-referrer' /></p><h4><a name='header-n266' class='md-header-anchor '></a>5. 类加载器分类</h4><ul><li>JVM支持两种类型的类加载器，分别是<strong>引导类加载器（Bootstrap ClassLoader）</strong>和 <strong>自定义加载器（User-Defined ClassLoader）</strong></li><li>从概念上讲，自定义类加载器一般指的是程序中由开发人员自定义的一类类加载器，但是Java虚拟机规范没有这样定义，而是<strong>将所有的派生于抽象类ClassLoader的类加载器都划分为自定义类加载器</strong></li><li>无论加载器的类型如何划分，在程序中我们最常见的类加载器只有3个，如下</li></ul><p><img src='/images/1597822535038.png' alt='1597822535038' referrerPolicy='no-referrer' /></p><pre spellcheck="false" class="md-fences mock-cm md-end-block" lang="java" contenteditable="false" cid="n275" mdtype="fences" style="break-inside: unset;">public class ClassLoaderTest {
     public static void main(String[] args) {
         // 获取系统类加载器
         ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
